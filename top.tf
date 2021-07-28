@@ -1,4 +1,20 @@
+module "ec2-module" {
+  source = "./mod/EC2"
+  environment = var.environment
+  name_tag = "${var.name_tag}"
+  Privatea1block = var.Privatea1block
+  Privatea2block = var.Privatea2block
+  Publica1block = var.Publica1block
+  VPCID = module.network-vpc-module.vpcsharedid
+  secec2arn = module.securityG-module.secec2arn
+}
 
+module "securityG-module" {
+  source = "./mod/secgroups"
+  environment = var.environment
+  name_tag = "${var.name_tag}"
+  VPCID = module.network-vpc-module.vpcsharedid
+}
 
 
 module "network-vpc-module" {

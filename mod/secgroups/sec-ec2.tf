@@ -26,6 +26,6 @@ resource "aws_security_group" "allow" {
   }
 
   tags = {
-    Name = "allow"
+    Name = "${var.name_tag}-${var.environment}-secG"
   }
 }
