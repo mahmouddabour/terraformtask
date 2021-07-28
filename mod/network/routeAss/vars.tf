@@ -4,6 +4,8 @@ variable "Privatea1sub" {}
 variable "Privatea2sub" {}
 variable "Privateb1sub" {}
 variable "Privateb2sub" {}
+variable "Privateb3sub" {}
+variable "Privateb4sub" {}
 variable "rtPublic" {}
 variable "rtprivate" {}
 variable "rtprivatesubnet" {}

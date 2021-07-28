@@ -18,7 +18,8 @@ module "network-subnet-module" {
   Privatea2block = var.Privatea2block
   Privateb1block = var.Privateb1block
   Privateb2block = var.Privateb2block
-  
+  Privateb3block = var.Privateb3block
+  Privateb4block = var.Privateb4block
 }
 
 module "eip-module" {

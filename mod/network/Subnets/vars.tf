@@ -9,3 +9,5 @@ variable "Privatea1block" {}
 variable "Privatea2block" {}
 variable "Privateb1block" {}
 variable "Privateb2block" {}
+variable "Privateb3block" {}
+variable "Privateb4block" {}

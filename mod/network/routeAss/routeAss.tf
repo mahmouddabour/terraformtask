@@ -22,3 +22,13 @@ resource "aws_route_table_association" "Privateb2" {
   subnet_id      = var.Privateb2sub
   route_table_id = var.rtprivatesubnet
 }
+
+resource "aws_route_table_association" "Privateb3" {
+  subnet_id      = var.Privateb3sub
+  route_table_id = var.rtprivatesubnet
+}
+
+resource "aws_route_table_association" "Privateb4" {
+  subnet_id      = var.Privateb4sub
+  route_table_id = var.rtprivatesubnet
+}

@@ -21,3 +21,11 @@ output "subnetPrivateb1id" {
 output "subnetPrivateb2id" {
  value = aws_subnet.Privateb2.id
 }
+
+output "subnetPrivateb3id" {
+ value = aws_subnet.Privateb3.id
+}
+
+output "subnetPrivateb4id" {
+ value = aws_subnet.Privateb4.id
+}
