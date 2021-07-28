@@ -59,6 +59,8 @@ module "rtAss-module" {
   Privatea2sub = module.network-subnet-module.subnetPrivatea2id
   Privateb1sub = module.network-subnet-module.subnetPrivateb1id
   Privateb2sub = module.network-subnet-module.subnetPrivateb2id
+  Privateb3sub = module.network-subnet-module.subnetPrivateb3id
+  Privateb4sub = module.network-subnet-module.subnetPrivateb4id
   rtPublic = module.rt-module.rtPublic
   rtprivate = module.rt-module.rtprivate
   rtprivatesubnet = module.rt-module.rtprivatesubnet
