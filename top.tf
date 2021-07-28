@@ -1,3 +1,6 @@
+
+
+
 module "network-vpc-module" {
   source = "./mod/network/VPC"
   environment = var.environment
