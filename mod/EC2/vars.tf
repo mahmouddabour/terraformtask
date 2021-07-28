@@ -1,7 +1,8 @@
 variable "name_tag" {}
 variable "environment" {}
 variable "VPCID" {}
-variable "Privatea1block" {}
-variable "Privatea2block" {}
+variable "Publica1sub" {}
+variable "Privatea1sub" {}
 variable "secec2arn" {}
-variable "Publica1block" {}
+variable "Privatea2sub" {}
+variable "secec2basarn" {}

@@ -2,10 +2,11 @@ module "ec2-module" {
   source = "./mod/EC2"
   environment = var.environment
   name_tag = "${var.name_tag}"
-  Privatea1block = var.Privatea1block
-  Privatea2block = var.Privatea2block
-  Publica1block = var.Publica1block
+  Privatea1sub  = module.network-subnet-module.subnetPrivatea1id
+  Privatea2sub = module.network-subnet-module.subnetPrivatea2id
+  Publica1sub = module.network-subnet-module.subnetPublica1id
   VPCID = module.network-vpc-module.vpcsharedid
+  secec2basarn = module.securityG-module.secec2basarn
   secec2arn = module.securityG-module.secec2arn
 }
 
@@ -83,4 +84,16 @@ module "rtAss-module" {
   rtPublic = module.rt-module.rtPublic
   rtprivate = module.rt-module.rtprivate
   rtprivatesubnet = module.rt-module.rtprivatesubnet
+}
+
+module "lb-module" {
+  source = "./mod/LB"
+  environment = var.environment
+  name_tag = "${var.name_tag}" 
+  VPCID = module.network-vpc-module.vpcsharedid
+  seclbarn = module.securityG-module.seclbarn
+  Publica1sub = module.network-subnet-module.subnetPublica1id
+  Publicb1sub = module.network-subnet-module.subnetPublicb1id
+  ec2web1 = module.ec2-module.ec2web1
+  ec2web2 = module.ec2-module.ec2web2
 }

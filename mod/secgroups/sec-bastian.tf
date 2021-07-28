@@ -1,6 +1,6 @@
-resource "aws_security_group" "allow" {
-  name        = "allow"
-  description = "Allow inbound traffic"
+resource "aws_security_group" "allowbas" {
+  name        = "allowbas"
+  description = "Allow bas inbound traffic"
   vpc_id      = var.VPCID
 
   ingress {
@@ -26,6 +26,6 @@ resource "aws_security_group" "allow" {
   }
 
   tags = {
-    Name = "${var.name_tag}-${var.environment}-EC2secG"
+    Name = "${var.name_tag}-${var.environment}-EC2bassecG"
   }
 }
