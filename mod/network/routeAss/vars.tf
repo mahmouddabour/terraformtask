@@ -1,0 +1,9 @@
+variable "Publica1sub" {}
+variable "Publicb1sub" {}
+variable "Privatea1sub" {}
+variable "Privatea2sub" {}
+variable "Privateb1sub" {}
+variable "Privateb2sub" {}
+variable "rtPublic" {}
+variable "rtprivate" {}
+variable "rtprivatesubnet" {}
