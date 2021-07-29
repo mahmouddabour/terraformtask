@@ -39,7 +39,7 @@ resource "aws_subnet" "Privatea2" {
 resource "aws_subnet" "Privateb1" {
   vpc_id     = var.VPCID
   cidr_block = var.Privateb1block
-  availability_zone = var.availability_zone2
+  availability_zone = var.availability_zone1
 
   tags = {
     Name = "${var.name_tag}-${var.environment}-Privateb1"

@@ -8,3 +8,6 @@ output "seclbarn" {
 output "secec2basarn" {
   value = aws_security_group.allowbas.id 
 }
+output "SecGrds" {
+  value = aws_security_group.SecGrds.id 
+}

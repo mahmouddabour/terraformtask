@@ -11,7 +11,9 @@ resource "aws_lb" "lb" {
   load_balancer_type = "application"
   security_groups    = [var.seclbarn]
   subnets            = [var.Publica1sub,var.Publicb1sub]
-
+lifecycle {
+    ignore_changes = all
+  }
 
   tags = {
     Name = "${var.name_tag}-${var.environment}-lb"

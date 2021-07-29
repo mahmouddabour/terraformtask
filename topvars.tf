@@ -11,3 +11,5 @@ variable "Privateb1block" {}
 variable "Privateb2block" {}
 variable "Privateb3block" {}
 variable "Privateb4block" {}
+variable "db_password" {}
+variable "db_username" {}

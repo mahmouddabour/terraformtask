@@ -1,3 +1,14 @@
+module "rds-module" {
+  source = "./mod/RDS"
+  environment = var.environment
+  subnetPrivateb1id  = module.network-subnet-module.subnetPrivateb1id
+  subnetPrivateb2id  = module.network-subnet-module.subnetPrivateb2id
+    name_tag = "${var.name_tag}"
+  db_username = "${var.db_username}"
+  db_password = "${var.db_password}"
+  SecGrds = module.securityG-module.SecGrds
+  
+}
 module "ec2-module" {
   source = "./mod/EC2"
   environment = var.environment

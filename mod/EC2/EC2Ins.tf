@@ -11,6 +11,10 @@ resource "aws_instance" "web1" {
     sudo apt install apache2 -y
     echo "*** Completed Installing apache2"
   EOF
+
+  lifecycle {
+    ignore_changes = all
+  }
   tags = {
     Name = "${var.name_tag}-${var.environment}-web1"
   }
@@ -30,7 +34,9 @@ resource "aws_instance" "web2" {
     sudo apt install apache2 -y
     echo "*** Completed Installing apache2"
   EOF
-
+lifecycle {
+    ignore_changes = all
+  }
   
   tags = {
     Name = "${var.name_tag}-${var.environment}-web2"
@@ -44,6 +50,9 @@ resource "aws_instance" "bastian" {
   associate_public_ip_address = true
   key_name = "deployer-key"
   security_groups = [var.secec2basarn]
+  lifecycle {
+    ignore_changes = all
+  }
   tags = {
     Name = "${var.name_tag}-${var.environment}-bastian"
   }
